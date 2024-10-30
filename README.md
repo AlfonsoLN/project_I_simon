@@ -3,7 +3,7 @@
 ## Team members
 
 | Name | Username |
-| ---- | 
+| ---- | -------- |
 | Alfonso Lizarraga Navarrete | AlfonsoLN |
 | Rodrigo Adrián Rodríguez Puerto | rodrigoARP |
 
