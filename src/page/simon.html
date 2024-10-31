@@ -7,13 +7,15 @@
     <title>Simon Says</title>
 </head>
 <body class="bg-orange-100">
-    <main class="flex  justify-center align-middle p-8">
-        <section class="grid grid-rows-2 grid-cols-2 bg-black p-6 rounded-full">
-            <button class="w-60 h-60 m-2.5 bg-amber-400 rounded-xl rounded-tl-full"></button>
-            <button class="w-60 h-60 m-2.5 bg-blue-700 rounded-xl rounded-tr-full"></button>
-            <button class="w-60 h-60 m-2.5 bg-red-600 rounded-xl rounded-bl-full"></button>
-            <button class="w-60 h-60 m-2.5 bg-green-700 rounded-xl rounded-br-full"></button>
+    <main class="flex justify-center align-middle p-12">
+        <section class="grid grid-rows-2 grid-cols-2 bg-gray-600 p-4 rounded-full">
+            <button class="w-52 h-52 m-2 rounded-xl rounded-tr-full bg-blue-700 hover:bg-blue-800 active:bg-blue-900 row-start-1 row-end-2 col-start-2 col-end-3" id="dos"></button>
+            <button class="w-52 h-52 m-2 rounded-xl rounded-tl-full bg-amber-400 hover:bg-amber-500 active:bg-amber-600 row-start-1 row-end-2 col-start-1 col-end-2" id="uno"></button>
+            <button class="w-52 h-52 m-2 rounded-xl rounded-bl-full bg-red-600 hover:bg-red-700 active:bg-red-800 row-start-2 row-end-3 col-start-1 col-end-2" id="tres"></button>
+            <button class="w-52 h-52 m-2 rounded-xl rounded-br-full bg-green-700 hover:bg-green-800 active:bg-green-900 row-start-2 row-end-3 col-start-2 col-end-3" id="cuatro"></button>
         </section>
     </main>
+
+    <script src="simon.js"></script>
 </body>
 </html>
