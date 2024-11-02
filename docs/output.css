@@ -592,6 +592,8 @@ video {
 
 .flex {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .grid {
@@ -709,6 +711,7 @@ video {
   background-color: rgb(217 119 6 / var(--tw-bg-opacity));
 }
 
+
 .active\:bg-blue-900:active {
   --tw-bg-opacity: 1;
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
@@ -722,4 +725,65 @@ video {
 .active\:bg-red-800:active {
   --tw-bg-opacity: 1;
   background-color: rgb(153 27 27 / var(--tw-bg-opacity));
+}
+
+/*------------- BOTON INICIO ------------- */
+.botonInicio{
+  margin-top: 20px;
+}
+#boton-content {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #aa1d97;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;;
+}
+
+#botonInicio:hover {
+  background-color: rgb(95, 15, 88);
+}
+/*------------- BOTON INICIO ------------- */
+
+/* ------------ MENSAJE DE ERROR --------- */
+.fallo{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.fallo-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fallo button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: crimson;
+  border-radius: 15px;
+  color: #fff;
+}
+/* ------------ MENSAJE DE ERROR --------- */
+
+.title{
+  color: black;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bolder;
 }
