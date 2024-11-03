@@ -6,28 +6,71 @@
     <link rel="stylesheet" href="output.css">
     <title>Simon Says</title>
 </head>
-<body class="bg-orange-100">
-    <main class="flex justify-center align-middle p-12">
-        <h1 class="title">SIMON DICE</h1>
-        
-        <section class="grid grid-rows-2 grid-cols-2 bg-gray-600 p-4 rounded-full">
-            <button class="w-52 h-52 m-2 rounded-xl rounded-tr-full bg-blue-700 hover:bg-blue-800 active:bg-blue-900 row-start-1 row-end-2 col-start-2 col-end-3" id="dos"></button>
-            <button class="w-52 h-52 m-2 rounded-xl rounded-tl-full bg-amber-400 hover:bg-amber-500 active:bg-amber-600 row-start-1 row-end-2 col-start-1 col-end-2" id="uno"></button>
-            <button class="w-52 h-52 m-2 rounded-xl rounded-bl-full bg-red-600 hover:bg-red-700 active:bg-red-800 row-start-2 row-end-3 col-start-1 col-end-2" id="tres"></button>
-            <button class="w-52 h-52 m-2 rounded-xl rounded-br-full bg-green-700 hover:bg-green-800 active:bg-green-900 row-start-2 row-end-3 col-start-2 col-end-3" id="cuatro"></button>
+<body class="bg-teal-50 flex justify-center">
+    <main class="p-5 gap-5 flex flex-col max-w-fit">
+        <!-- Menú del Juego -->
+        <section class="gap-2 grid grid-rows-2 grid-cols-3 justify-center align-middle text-center">
+            <h1 class="p-2 row-start-1 row-end-2 col-start-1 col-end-4 text-3xl font-extrabold text-white font-outline-1">SIMON SAYS</h1>
+            <button class="p-2 px-4 max-w-fit bg-emerald-300 hover:bg-emerald-400 active:bg-emerald-500 rounded-lg row-start-2 row-end-3 col-start-1 col-end-2 justify-self-center text-lg font-bold" onclick="iniciarJuego()" id="start">Start</button>
+            <p class="p-2 row-start-2 row-end-3 col-start-2 col-end-3 text-lg font-bold" id="steps">1/20</p>
+            <button class="p-2 px-4 max-w-fit bg-orange-300 hover:bg-orange-400 active:bg-orange-500 rounded-lg row-start-2 row-end-3 col-start-3 col-end-4 justify-self-center text-lg font-bold" onclick="reiniciarJuego()" id="restart">Restart</button>
         </section>
-
-        <div class="botonInicio">
-            <button id="boton-content" onclick="iniciarJuego()">Inicio</button>
-        </div>
-
-        <div id="mensajeFallo" class="fallo">
-            <div class="fallo-content">
-              <h2>¡Has fallado!</h2>
-              <button onclick="reiniciarJuego()">Reiniciar juego</button>
-            </div>
-        </div>
-
+        
+        <!-- Rueda de Juego -->
+        <section  class="bg-gray-600 p-4 gap-4 grid grid-rows-2 grid-cols-2 rounded-45% justify-items-stretch">
+            <svg class="w-32 h-32 row-start-1 row-end-2 col-start-1 col-end-2 md:w-52 md:h-52" viewBox="0 0 100 100" id="uno">
+                <path class="fill-amber-400 hover:fill-amber-500 active:fill-amber-600"
+                d="M 94,0 
+                    C 94,0 0,0 0,94 
+                    C 0,94 0,100 3,100 
+                    H 47
+                    C 47,100 50,100 50,97
+                    C 50,97 50,50 97,50 
+                    C 97,50 100,50 100,47
+                    V 3
+                    C 100,3 100,0 97,0
+                z"/>
+            </svg>
+            <svg class="w-32 h-32 rotate-90 row-start-1 row-end-2 col-start-2 col-end-3 md:w-52 md:h-52" viewBox="0 0 100 100" id="dos">
+                <path class="fill-blue-700 hover:fill-blue-800 active:fill-blue-900"
+                d="M 94,0 
+                    C 94,0 0,0 0,94 
+                    C 0,94 0,100 3,100 
+                    H 47
+                    C 47,100 50,100 50,97
+                    C 50,97 50,50 97,50 
+                    C 97,50 100,50 100,47
+                    V 3
+                    C 100,3 100,0 97,0
+                z"/>
+            </svg>
+            <svg class="w-32 h-32 -rotate-90 row-start-2 row-end-3 col-start-1 col-end-2 md:w-52 md:h-52" viewBox="0 0 100 100" id="tres">
+                <path class="fill-red-600 hover:fill-red-700 active:fill-red-800"
+                d="M 94,0 
+                    C 94,0 0,0 0,94 
+                    C 0,94 0,100 3,100 
+                    H 47
+                    C 47,100 50,100 50,97
+                    C 50,97 50,50 97,50 
+                    C 97,50 100,50 100,47
+                    V 3
+                    C 100,3 100,0 97,0
+                z"/>
+            </svg>
+            <svg class="w-32 h-32 rotate-180 row-start-2 row-end-3 col-start-2 col-end-3 md:w-52 md:h-52" viewBox="0 0 100 100" id="cuatro">
+                <path class="fill-green-700 hover:fill-green-800 active:fill-green-900"
+                d="M 94,0 
+                    C 94,0 0,0 0,94 
+                    C 0,94 0,100 3,100 
+                    H 47
+                    C 47,100 50,100 50,97
+                    C 50,97 50,50 97,50 
+                    C 97,50 100,50 100,47
+                    V 3
+                    C 100,3 100,0 97,0
+                z"/>
+            </svg>
+        </section>
     </main>
 
     <script src="simon.js"></script>

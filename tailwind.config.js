@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       borderRadius: {
-        'full': '100%'
+        '45%': '45%',
       }
     },
   },
