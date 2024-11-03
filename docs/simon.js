@@ -24,7 +24,7 @@ function patron(){
 /* ------ Aqui creamos el patrón de números ------ */
 
 function iniciarJuego() {
-    const boton = document.getElementById("botonInicio");
+    const boton = document.getElementById("boton-content");
     boton.style.display = "none";
     botonPresionado = true;
     activarBotones();
